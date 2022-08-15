@@ -22,7 +22,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 - XD Prototype: [https://xd.adobe.com/view/f9597aed-d5e7-4e31-b508-5115009dd5f2-ac0a/](https://xd.adobe.com/view/f9597aed-d5e7-4e31-b508-5115009dd5f2-ac0a/)
 - Solution URL: []()
-- Live Site URL: []()
+- Live Site URL: [https://codedavidc.github.io/nft-preview-card-component-main/](https://codedavidc.github.io/nft-preview-card-component-main/)
 
 
 ## My process and what I learned
@@ -43,17 +43,22 @@ I created an XD File before coding to create a prototype of the design. I also d
 I learned how to use these lines of code. Vew snippets below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<p>Creation of <span class="creator-name">Jules Wyvern</span></p>>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+ul,
+ol {
+  list-style: none;
+  list-style-type: none;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+@media only screen and (min-width: 1200px)
 ```
 
 
