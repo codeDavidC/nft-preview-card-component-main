@@ -191,8 +191,6 @@ body {
     .text {
         font-size: 18px;
     }
-    .attribution {
-    }
   }
 
   @media only screen and (max-width: 330px) {
@@ -200,7 +198,7 @@ body {
     .card {
         padding: 7%;
     }
-    . .title {
+    .title {
         font-size: .9rem;
     }
     .text {
