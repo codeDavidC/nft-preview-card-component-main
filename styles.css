@@ -1,2 +1,215 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --text: hsl(215, 51%, 70%);
+    --accent: hsl(178, 100%, 50%);
+
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --title: hsl(0, 0%, 100%);
+}
+
+
+/* Andy Bell's CSS Reset - https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  /* font: inherit; */
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  list-style-type: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utilites */
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    max-width: 326px;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.card img {
+    border-radius: 9px;
+}
+
+.title {
+    color: var(--title);
+    font-size: 1.375rem;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.text {
+    font-size: 1rem;
+    color: var(--text);
+    padding-top: 20px;
+}
+
+
+.stat-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.stat-container li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.stat-container img {
+    padding-right: 5px;
+}
+
+.stat-currency {
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+.stat-days {
+    color: var(--text);
+}
+
+.creator-container {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.creator-container img {
+    width: 34px;
+    padding-right: 5px;
+}
+
+.creator-container p {
+    color: var(--text);
+}
+
+.creator-name {
+    color: var(--title);
+}
+
+
+.attribution { 
+    margin-top: 10px;
+    color: white;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .card {
+      max-width: 350px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+    .attribution {
+    }
+  }
+
+  @media only screen and (max-width: 330px) {
+
+    .card {
+        padding: 7%;
+    }
+    . .title {
+        font-size: .9rem;
+    }
+    .text {
+        padding-top: 10px;
+        font-size: .8rem;
+    }
+    .stat-container,
+    .stat-currency, 
+    .creator-container {
+        font-size: .7rem;
+    }
+  }
