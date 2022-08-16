@@ -9,7 +9,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 - [Overview](#overview)
   - [Links](#links)
-- [My process and what I've learned](#my-process-and-what-i-learned)
+- [My process and what I learned](#my-process-and-what-i-learned)
   - [Built with](#built-with)
   - [Continued development and resources](#continued-development-and-resources)
   - [What I learned](#what-i-learned)
@@ -29,18 +29,20 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 I created an XD File before coding to create a prototype of the design. I also drew the containers for each element on the page to provide a visualization of how everything is structured before I code.
 
+I learned how to create Pseudo Elements and refreshed my memory with flexbox for positioning, and also media queries for responsive design. 
+
 
 ### Built with
 
 - HTML and CSS
-- BEM CSS class naming convention
+- Some BEM CSS class naming convention
 - Flexbox
 - Mobile-first workflow
 
 
 ### What I learned
 
-I learned how to use these lines of code. Vew snippets below:
+I learned how to use these lines of code:
 
 ```html
 <p>Creation of <span class="creator-name">Jules Wyvern</span></p>>
@@ -58,7 +60,35 @@ body {
     align-items: center;
 }
 
+
+.card>a {
+  position: relative;
+}
+
+.card>a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+  background-color: var(--accent-trans);
+  background-image: url(./images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+
+.card>a:hover::after {
+  opacity: 1;
+}
+
+
 @media only screen and (min-width: 1200px)
+
 ```
 
 
@@ -66,7 +96,7 @@ body {
 
 In the future, I want to be able to work faster and create nav bars with fluidly using flexbow. 
 
-- [The Net Ninja's CSS Grid Tutorial Playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9itC4TxYMzFCfveyutyPOCY) - get a better understanding of CSS Grid and apply it to this project.
+- [The Net Ninja's CSS Grid Tutorial Playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9itC4TxYMzFCfveyutyPOCY) - This helped me with Pseudo Elements and hover effect transitions.
 - [Get started with GitHub and Git | Quick Beginner Tutorial](https://www.youtube.com/watch?v=lK5NsSBjSFs) - After I refreshed my memory with GitHub and Git I made this video which helped me reinforced what I learned and apply it to my projects.
 - [BEM in CSS Tutorial](https://www.youtube.com/watch?v=N1TYlM0GA5E) - This video helped me get more insight on how to use BEM to write well structured, easy to read CSS.
 - [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) - This Source helped me create this markdown and understand how MD Syntax works. 
