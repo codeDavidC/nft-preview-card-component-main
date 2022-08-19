@@ -135,6 +135,10 @@ body {
   opacity: 1;
 }
 
+.card>a:active::after {
+  opacity: 1;
+}
+
 .title {
     font-size: 1.375rem;
     font-weight: 600;
